@@ -9,7 +9,7 @@ export default function ProgramDetail() {
   const [, params] = useRoute("/programs/:id");
   const id = params?.id ? parseInt(params.id) : 0;
   
-  const { data: program, isLoading } = useGetProgram(id, { query: { enabled: !!id } });
+  const { data: program, isLoading } = useGetProgram(id);
 
   if (isLoading) {
     return (
