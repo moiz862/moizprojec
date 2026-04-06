@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "pnpm build && mkdir -p public && cp -rp artifacts/daycare-website/dist/public/* public/",
-  "outputDirectory": "public",
+  "buildCommand": "pnpm build:vercel",
+  "outputDirectory": "artifacts/daycare-website/dist/public",
   "rewrites": [
     {
       "source": "/api/(.*)",
