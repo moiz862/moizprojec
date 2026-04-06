@@ -25,7 +25,7 @@
 #     - typescript
 #
 # ============================================================================
-minimumReleaseAge: 1440
+minimumReleaseAge: 0
 
 minimumReleaseAgeExclude:
   # Exclude @replit scoped packages from the minimum release age check.
@@ -73,6 +73,8 @@ onlyBuiltDependencies:
   - msw
   - unrs-resolver
   - better-sqlite3
+  - lightningcss
+  - "@tailwindcss/vite"
 
 overrides:
   # drizzle-kit uses esbuild internally on an older version that's vulnerable, this overrides it
