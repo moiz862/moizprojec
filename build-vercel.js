@@ -11,12 +11,12 @@ try {
 }
 
 const src = path.join(__dirname, 'artifacts', 'daycare-website', 'dist');
-const dest = path.join(__dirname, 'public');
+const dest = path.join(__dirname, 'vercel-dist');
 
 if (fs.existsSync(dest)) {
     fs.rmSync(dest, { recursive: true, force: true });
 }
 
-console.log(`Moving ${src} to ${dest}...`);
-fs.renameSync(src, dest);
+console.log(`Copying ${src} to ${dest}...`);
+fs.cpSync(src, dest, { recursive: true });
 console.log("Done building and moving static assets for Vercel!");
