@@ -21,7 +21,13 @@ const accreditations = [
 ];
 
 export default function About() {
-  const { data: stats } = useGetStats();
+  const { data: statsData } = useGetStats();
+  const stats = statsData || { 
+    yearsInOperation: 3, 
+    totalChildren: 50, 
+    totalStaff: 8, 
+    satisfactionRate: 99 
+  };
 
   return (
     <div className="min-h-screen bg-background">

@@ -58,7 +58,7 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { has
           <div className="space-y-4">
             <h1 className="text-2xl font-bold text-primary">Something went wrong.</h1>
             <p className="text-muted-foreground">Please try refreshing the page or contact us if the issue persists.</p>
-            <button onClick={() => window.location.assign("/")} className="px-4 py-2 bg-primary text-white rounded-full">Go to Home</button>
+            <button onClick={() => this.setState({ hasError: false })} className="px-4 py-2 bg-primary text-white rounded-full">Try Again</button>
           </div>
         </div>
       );

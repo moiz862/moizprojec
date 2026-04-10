@@ -16,7 +16,13 @@ const stagger = {
 };
 
 export default function Home() {
-  const { data: stats } = useGetStats();
+  const { data: statsData } = useGetStats();
+  const stats = statsData || { 
+    yearsInOperation: 3, 
+    totalChildren: 50, 
+    totalStaff: 8, 
+    satisfactionRate: 99 
+  };
   const { data: programs } = useListPrograms();
   const { data: testimonials } = useListTestimonials();
 

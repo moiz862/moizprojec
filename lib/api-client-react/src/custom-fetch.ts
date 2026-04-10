@@ -247,7 +247,10 @@ async function parseJsonBody(
   try {
     return JSON.parse(normalized);
   } catch (cause) {
-    throw new ResponseParseError(response, raw, cause, requestInfo);
+    // If it's not JSON, we return null instead of throwing a hard error 
+    // to prevent the entire React app from crashing on a failed background fetch.
+    console.warn(`Failed to parse response as JSON from ${requestInfo.url}. Returning null.`);
+    return null;
   }
 }
 
