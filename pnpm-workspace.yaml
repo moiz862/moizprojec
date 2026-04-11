@@ -72,7 +72,6 @@ onlyBuiltDependencies:
   - esbuild
   - msw
   - unrs-resolver
-  - better-sqlite3
   - lightningcss
   - "@tailwindcss/vite"
 
