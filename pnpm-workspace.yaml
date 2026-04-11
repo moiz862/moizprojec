@@ -35,6 +35,7 @@ minimumReleaseAgeExclude:
   - stripe-replit-sync
 
 packages:
+  - api
   - artifacts/*
   - lib/*
   - lib/integrations/*
@@ -72,6 +73,7 @@ onlyBuiltDependencies:
   - esbuild
   - msw
   - unrs-resolver
+  - better-sqlite3
   - lightningcss
   - "@tailwindcss/vite"
 

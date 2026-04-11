@@ -5,6 +5,7 @@
     "moduleResolution": "bundler",
     "outDir": "../dist-vercel-api",
     "rootDir": "..",
+    "baseUrl": ".",
     "paths": {
       "@workspace/db": ["../lib/db/src/index.ts"],
       "@workspace/db/schema": ["../lib/db/src/schema/index.ts"],

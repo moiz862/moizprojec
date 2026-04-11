@@ -1,13 +1,14 @@
 import app from '../artifacts/api-server/src/app';
 
-// Configure Vercel to not parse the body natively, 
-// allowing Express's express.json() to consume the raw stream.
+// Set up Vercel serverless function configuration
 export const config = {
   api: {
+    // Disable Vercel's default body parser so Express can handle it
     bodyParser: false,
+    externalResolver: true,
   },
 };
 
-// Export the Express app as a Vercel Serverless Function handler.
-// Vercel intercepts requests and passes them to this Express app instance.
+// Export the Express app as the Vercel serverless function handler
 export default app;
+
